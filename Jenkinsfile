@@ -10,7 +10,7 @@ pipeline {
       steps {
         script {
           jiraSendBuildInfo(
-            issueKeys: ['KC-1234'], // Can be dynamically resolved using JiraIssueKeyHelper
+            issueKeys: ['KC-1543'], // Can be dynamically resolved using JiraIssueKeyHelper
             pipelineId: env.BUILD_ID,
             pipelineDisplayName: env.JOB_NAME,
             state: 'successful'
@@ -33,7 +33,7 @@ pipeline {
             environmentId: 'dev',         // e.g., dev, staging, prod
             environmentName: 'Development',
             environmentType: 'development', // development | staging | production
-            issueKeys: ['KC-1234'],
+            issueKeys: ['KC-1543'],
             deploymentState: 'successful', // or 'failed'
             pipelineId: env.BUILD_ID,
             pipelineDisplayName: env.JOB_NAME
