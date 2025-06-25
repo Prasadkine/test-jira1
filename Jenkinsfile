@@ -6,13 +6,6 @@ pipeline {
   }
 
   stages {
-    stage('Build') {
-      steps {
-        echo '🏗️ Building the app...'
-        // Your build steps
-      }
-    }
-
     stage('Notify Build Status') {
       steps {
         script {
@@ -49,4 +42,3 @@ pipeline {
       }
     }
   }
-}
